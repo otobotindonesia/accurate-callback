@@ -7,18 +7,17 @@
       window.onload = function () {
         const params = new URLSearchParams(window.location.search);
         const code = params.get("code");
-
         if (code) {
-          // Ganti ke URL Web App kamu
+          // Redirect ke Web App kamu dengan menyisipkan ?code=...
           const redirectUrl = "https://script.google.com/macros/s/AKfycbxa_OWrgl7G27I0EP88s40ttgI4pjDMKJbXGXjUJlHMKB3euZE9MexGpTDEF7_RjrRIzw/exec?code=" + code;
           window.location.href = redirectUrl;
         } else {
-          document.body.innerHTML = "<h3>Gagal mendapatkan kode dari Accurate.</h3>";
+          document.body.innerHTML = "<h3>Gagal mendapatkan code dari Accurate.</h3>";
         }
       };
     </script>
   </head>
   <body>
-    <p>Mengalihkan ke Google Apps Script...</p>
+    <p>Mengalihkan ke Web App Google Script...</p>
   </body>
 </html>
